@@ -1,0 +1,24 @@
+{
+  "name": "cloud_console",
+  "version": "1.0.0",
+  "description": "Console to connect multiple clouds",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kathuriaas/cloud_console.git"
+  },
+  "author": "Ashish Kathuria",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kathuriaas/cloud_console/issues"
+  },
+  "homepage": "https://github.com/kathuriaas/cloud_console#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0"
+  }
+}
