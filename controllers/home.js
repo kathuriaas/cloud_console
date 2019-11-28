@@ -1,4 +1,4 @@
 
 exports.get_home = function(req,resp,next) {
-	resp.render('home')
+	resp.render('home');
 }
