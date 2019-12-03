@@ -10,7 +10,15 @@ p {
 footer {
   color: red;
 }
+.header_style {
+	display: block;
+	background-color: skyblue;
+	height: 40px;
+	font-size: 35px;
+}
 .footer_style {
 	background-color: black;
+        display: block;
+        height: 40px;
+        font-size: 35px;
 }
-
