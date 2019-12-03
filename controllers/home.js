@@ -1,4 +1,4 @@
 
 exports.get_home = function(req,resp,next) {
-	resp.render('home' , { temp : "hi there" });
+	resp.render('home' , { title : "Cloud Console Home" });
 }
