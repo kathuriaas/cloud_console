@@ -1,4 +1,4 @@
 
 exports.get_about = function(req,resp,next) {
-        resp.render('about' , { title : "Cloud Console about" });
+        resp.render('about_view' , { title : "Cloud Console about" });
 }

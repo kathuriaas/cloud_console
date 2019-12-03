@@ -15,6 +15,8 @@ app.engine('handlebars',exphbs());
 app.set('views',path.join(__dirname,'views'));
 app.set('view engine','handlebars');
 
+//Load static path for file search
+app.use(express.static(path.join(__dirname,'public')));
 
 //Import and Load routes
 const routes = require('./routes/routes.js');
