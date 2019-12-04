@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const exphbs  = require('express-handlebars');
 const dotenv = require('dotenv');
+const favicon = require('serve-favicon');
 
 //Initilize app
 const app = express();
@@ -21,6 +22,9 @@ app.use(express.static(path.join(__dirname,'public')));
 //Import and Load routes
 const routes = require('./routes/routes.js');
 app.use('/',routes);
+
+//Use Favicon
+app.use(favicon(__dirname + '/public/favicon.ico'));
 
 //Start server
 app.listen(process.env.PORT, function(){
