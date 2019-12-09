@@ -2,6 +2,7 @@ const db = require('./connect_db.js');
 
 async function getCloudNames(req, res) {
 		try {
+			console.log('In getCloudList.js');
 			var resultset = await db.runQuery('getCloudNames',{});
 			return res.send(resultset);
 		} catch (error) {

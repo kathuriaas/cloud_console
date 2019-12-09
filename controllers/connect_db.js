@@ -11,24 +11,26 @@ const db_config = {
 }
 
 const pool = new Pool(db_config);
-const query_text = queries.get_query('getCloudNames',{});
 
-async function runQuery(query_text,query_parameters) {
-	pool
-		.connect()
-		.then(client => {
-			.query(query_text)
-			.then(res => {
-				return res;
-				client.release();
-				console.log('client');
-				return('client');
-				})
-				.catch(err => {
-					client.release()
-					console.log(err.stack)
-				})
-		})
+function runQuery(query_code,query_parameters) {
+	return new Promise((resolve, reject)=>{
+		pool
+                .connect()
+                .then(client => {
+			const query_text = queries.get_query(query_code,query_parameters);
+                        return client
+                                .query(query_text)
+                                .then(res => {
+                                        client.release();
+					console.log('In connect_db.js, executing ',query_code)
+                                        resolve(res.rows);
+                                })
+                                .catch(err => {
+                                        client.release()
+                                        console.log(err.stack)
+                                })
+                })
+	})
 }
 
 module.exports.runQuery =runQuery;
