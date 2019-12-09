@@ -26,8 +26,9 @@ function runQuery(query_code,query_parameters) {
                                         resolve(res.rows);
                                 })
                                 .catch(err => {
-                                        client.release()
-                                        console.log(err.stack)
+                                        client.release();
+                                        console.log(err.stack);
+					reject(err);
                                 })
                 })
 	})
