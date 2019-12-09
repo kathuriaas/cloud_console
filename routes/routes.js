@@ -18,7 +18,7 @@ router.get('/about', function(req,res){
 
 //Get cloud list page
 router.get('/getCloudList', function(req,res){
-	getCloudList.readAll(req,res);
+	getCloudList.getCloudNames(req,res);
 });
 
 module.exports = router;

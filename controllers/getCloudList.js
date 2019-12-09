@@ -1,17 +1,13 @@
-const db = require('./dbConnect.js')
-const queries = require('./dbQueries')
+const db = require('./connect_db.js');
 
-const getCloudList = {
-	async readAll(req, res) {
+async function getCloudNames(req, res) {
 		try {
-			const query_text = queries.get_query('getCloudList',{});
-			console.log(query_text);
-			const { rows } = await db.runQuery(query_text);
-			return res.send({ rows });
+			var resultset = await db.runQuery('getCloudNames',{});
+			return res.send(resultset);
 		} catch (error) {
+			console.log('Error in getCloudList.js');
 			return res.send(error);
 		}
-	}
-};
+	};
 
-module.exports = getCloudList;
+module.exports.getCloudNames = getCloudNames;

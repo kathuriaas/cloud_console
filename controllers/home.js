@@ -1,4 +1,4 @@
 
-exports.get_home = function(req,resp,next) {
-	resp.render('home_view' , { title : "Cloud Console Home" });
+exports.get_home = function(req,res,next) {
+	res.render('home_view' , { title : "Cloud Console Home" });
 }
