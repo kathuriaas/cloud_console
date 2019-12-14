@@ -22,7 +22,7 @@ function runQuery(query_code,query_parameters) {
                                 .query(query_text)
                                 .then(res => {
                                         client.release();
-					console.log('In connect_db.js, executing ',query_code)
+					console.log('In database.js, executing ',query_code)
                                         resolve(res.rows);
                                 })
                                 .catch(err => {

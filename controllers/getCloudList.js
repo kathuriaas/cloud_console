@@ -1,4 +1,4 @@
-const db = require('./connect_db.js');
+const db = require('./database.js');
 
 async function getCloudNames(req, res) {
 		try {
