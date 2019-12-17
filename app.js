@@ -19,6 +19,9 @@ app.set('view engine','handlebars');
 //Load static path for file search
 app.use(express.static(path.join(__dirname,'public')));
 
+//Load static path for client side javascripts search
+app.use(express.static(path.join(__dirname,'client-controllers')));
+
 //Import and Load routes
 const routes = require('./routes/routes.js');
 app.use('/',routes);

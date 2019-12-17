@@ -6,15 +6,16 @@
     <meta name="description" content="">
     <meta name="author" content="">
 	<title> {{ title }} </title>
-	<link rel="stylesheet" href="/stylesheets/stylesheet.css">
-    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
-    <script src="/bootstrap/dist/js/bootstrap.js"></script>
+	<link rel="stylesheet" href="stylesheets/stylesheet.css">
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap-grid.css">
+    <script src="bootstrap/dist/js/bootstrap.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
-	<div class="jumbotron">
-	{{>header_view}} {{{body}}} {{>footer_view}}
-	</div>
+<div class="jumbotron">
+	{{>header_view}} <br><br> {{{body}}} <br><br> {{>footer_view}}
+</div>
 </body>
 </html>
