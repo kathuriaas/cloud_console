@@ -1,9 +1,9 @@
 const db = require('./database.js');
 
-async function getCloudNames(req, res) {
+async function getCloudDetails(req, res) {
 		try {
 			console.log('In getCloudList.js');
-			var resultset = await db.runQuery('getCloudNames',{});
+			var resultset = await db.runQuery('getCloudDetails',{});
 			return res.send(resultset);
 		} catch (error) {
 			console.log('Error in getCloudList.js');
@@ -11,4 +11,4 @@ async function getCloudNames(req, res) {
 		}
 	};
 
-module.exports.getCloudNames = getCloudNames;
+module.exports.getCloudDetails = getCloudDetails;

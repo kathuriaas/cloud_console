@@ -14,15 +14,16 @@ router.get('/about', function(req,res){
         res.render('about_view' , { title : "Cloud Console About" });
 });
 
-//Get AWS Services page
-router.get('/awsServices', function(req,res){
-        res.render('aws_view' , { title : "AWS Cloud Services" });
-});
-
-
 //Get cloud list page
 router.get('/getCloudList', function(req,res){
-	getCloudList.getCloudNames(req,res);
+	getCloudList.getCloudDetails(req,res);
 });
+
+
+//Add new cloud
+router.get('/addNewCloud', function(req,res){
+        getCloudList.getCloudDetails(req,res);
+});
+
 
 module.exports = router;
