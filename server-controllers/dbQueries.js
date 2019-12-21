@@ -1,7 +1,9 @@
 var query_dict = {
 	getCloudDetails: "select cloud_id,cloud_name,cloud_description from cloud_schema.cloud_details",
 	getCloudNames: "select cloud_name from cloud_schema.cloud_details",
-	getCloudIDs: "select cloud_id from cloud_schema.cloud_details"
+	getCloudIDs: "select cloud_id from cloud_schema.cloud_details",
+	getAwsServicesDetails: "select cloud_id,cloud_name,cloud_description from cloud_schema.cloud_details",
+	addCloudDetails: "select cloud_id,cloud_name,cloud_name from cloud_schema.cloud_details"
 	};
 
 function get_query(query_cd,params) {

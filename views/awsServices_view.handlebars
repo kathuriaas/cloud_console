@@ -1,0 +1,31 @@
+<script src="awsServices_client_controller.js"></script>
+<ol class="breadcrumb">
+</ol>
+<div class="container">
+<div class="table-responsive">
+<table class="table table-bordered">
+		<thead>
+			<tr>
+			<th scope="col">Service Provider</th>
+			<th scope="col">Service Name</th>
+			<th scope="col">Service Description</th>
+			</tr>
+		</thead>
+		<tbody id="div_body_awsServices"">
+		</tbody>
+	</table>
+</div>
+<form>
+<div class = "form-row">
+	<div class = "col">
+		<input type="text" class="form-control" placeholder="service provider" id="service_provider_id">
+	</div>
+        <div class = "col">
+		<input type="text" class="form-control" placeholder="Service Name" id="service_name_id">
+        </div>
+        <div class = "col">
+                <input type="text" class="form-control" placeholder="Service Description" id="service_desc_id">
+        </div>
+</div>
+	<button type="submit" class="btn btn-primary mb-2" onclick="addService();">Add Service</button>
+</form>
